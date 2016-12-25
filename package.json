@@ -26,6 +26,7 @@
     "babel-preset-stage-1": "^6.16.0",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.1",
+    "eslint": "^3.12.2",
     "json-loader": "^0.5.4",
     "node-sass": "^4.1.1",
     "postcss-loader": "^1.2.1",
