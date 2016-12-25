@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Fancy Project</title>
+  <title>Landscape Generation</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello, World!</h1>
-  <p>If you're reading this, that means the starter kit worked!</p>
-  <p>Hot reloading works with your JavaScript files and CSS. Go into <code>src/index.js</code> and add <code>alert("It worked!")</code> to the bottom and save. You should see a dialog pop up here without you having to refresh the page.</p>
-  <p>For issues/questions, please use the <a href='https://github.com/sunjay/gh-pages-es6-starter/issues'>project issues page</a></p>
+  <h1>Landscape Generation</h1>
+  <p>This is an implementation of an algorithm based on
+    <a href="https://bitesofcode.wordpress.com/2016/12/23/landscape-generation-using-midpoint-displacement/">this great blog post</a>.</p>
 
-  <p>Good luck on whatever you build with this! --Sunjay</p>
+  <form id="controls">
+    <label>Iterations:</label>
+    <input id="iterations" type="number" value="60" min="0" step="1" />
+    <input type="submit" value="Run" />
+    |
+    <button id="play" type="button">&#9654;&#9208; Play/Pause</button>
+    <button id="reset" type="button">&#8634; Reset</button>
+    |
+    <input id="fps" type="number" value="15" min="0" step="1" />
+    FPS
+  </form>
+  <canvas id="canvas" width="600" height="480"></canvas>
 
   <script type='text/javascript' src='bundle.js'></script>
 </body>

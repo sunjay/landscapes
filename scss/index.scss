@@ -1,5 +1,25 @@
-:local(.index) {
-  h1 {
-    color: #0099FF;
-  }
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+label {
+  font-weight: bold;
+}
+
+canvas {
+  border: 1px solid #000;
+}
+
+form {
+  margin-bottom: 5px;
+}
+
+:global(#iterations) {
+  width: 40px;
+}
+
+:global(#fps) {
+  width: 40px;
 }
