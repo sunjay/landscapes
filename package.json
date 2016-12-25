@@ -1,7 +1,7 @@
 {
-  "name": "my-fancy-project",
-  "version": "0.0.0",
-  "description": "<project description>",
+  "name": "landscapes",
+  "version": "0.0.1",
+  "description": "Landscape generation test",
   "main": "dist/index.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --content-base dist/ --inline --hot",
@@ -11,9 +11,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "<git repo>"
+    "url": "https://github.com/sunjay/landscapes"
   },
-  "author": "Author Name <author@example.com>",
+  "author": "Sunjay Varma <sunjay.ca>",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.3.3",
