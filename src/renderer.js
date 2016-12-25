@@ -3,7 +3,7 @@ export function renderPath(ctx, width, height, path) {
   // Factor is used to define the direction of the positive coordinates
   // and the scale of the drawing
   const xaxis = {ref: 0, factor: 1};
-  const yaxis = {ref: Math.floor(height / 2), factor: -15};
+  const yaxis = {ref: Math.floor(height / 2), factor: -1};
 
   const xCoord = (v) => v * xaxis.factor + xaxis.ref;
   const yCoord = (v) => v * yaxis.factor + yaxis.ref;

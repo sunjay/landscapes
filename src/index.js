@@ -11,7 +11,7 @@ const height = canvas.height;
 
 let playState = 'running';
 let path = [0, 0];
-let iterations = 0;
+let iteration = 0;
 
 loop();
 render();
@@ -22,15 +22,15 @@ document.getElementById('play').addEventListener('click', () => {
 
 document.getElementById('reset').addEventListener('click', () => {
   path = [0, 0];
-  iterations = 0;
+  iteration = 0;
 });
 
 function loop() {
-  const iterationsLimit = Number(document.getElementById('iterations').value);
+  const iterationLimit = Number(document.getElementById('iterations').value);
 
-  if (playState === 'running' && iterations < iterationsLimit) {
-    path = displaceMidpoints(path);
-    iterations += 1;
+  if (playState === 'running' && iteration < iterationLimit) {
+    path = displaceMidpoints(path, iteration, width, height);
+    iteration += 1;
   }
 
   const fps = Number(document.getElementById('fps').value) || 15;
@@ -43,6 +43,6 @@ function render() {
   ctx.clearRect(0, 0, width, height);
   renderPath(ctx, width, height, path);
 
-  const iterationsLimit = Number(document.getElementById('iterations').value);
-  renderProgress(ctx, width, height, iterations, iterationsLimit);
+  const iterationLimit = Number(document.getElementById('iterations').value);
+  renderProgress(ctx, width, height, iteration, iterationLimit);
 }
