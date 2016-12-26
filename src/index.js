@@ -20,9 +20,15 @@ document.getElementById('play').addEventListener('click', () => {
   playState = playState === 'running' ? 'paused' : 'running';
 });
 
-document.getElementById('reset').addEventListener('click', () => {
-  path = [0, 0];
-  iteration = 0;
+document.getElementById('reset').addEventListener('click', reset);
+
+document.getElementById('iterations').addEventListener('input', (e) => {
+  document.getElementById('iterations-value').value = e.target.value;
+  reset();
+});
+
+document.getElementById('fps').addEventListener('input', (e) => {
+  document.getElementById('fps-value').value = e.target.value;
 });
 
 function loop() {
@@ -35,6 +41,11 @@ function loop() {
 
   const fps = Number(document.getElementById('fps').value) || 15;
   setTimeout(loop, 1000 / fps);
+}
+
+function reset() {
+  path = [0, 0];
+  iteration = 0;
 }
 
 function render() {

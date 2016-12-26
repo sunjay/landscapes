@@ -16,10 +16,14 @@ form {
   margin-bottom: 5px;
 }
 
+input[type="range"] {
+  vertical-align: middle;
+}
+
 :global(#iterations) {
-  width: 40px;
+  width: 60px;
 }
 
 :global(#fps) {
-  width: 40px;
+  width: 60px;
 }
