@@ -8,7 +8,7 @@ git checkout gh-pages || git checkout -b gh-pages
 git merge master --no-ff --strategy-option theirs --no-edit --allow-unrelated-histories
 
 # Run the build to get the latest in the dist/ folder
-npm run build
+NODE_ENV=production npm run build -- -p
 
 # The dist/ files are ignored by default in the .gitignore
 # --all ensures that deletions are taken into account
