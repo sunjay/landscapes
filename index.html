@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Landscape Generation</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+</head>
+<body>
+  <h1>Landscape Generator</h1>
+  <p>This is an implementation of an algorithm based on
+    <a href="https://bitesofcode.wordpress.com/2016/12/23/landscape-generation-using-midpoint-displacement/">this great blog post</a>.</p>
+
+  <form>
+    <label>Iterations:</label>
+    <input id="iterations" type="range" value="10" min="0" max="15" step="1" />
+    <output id="iterations-value">10</output>
+    |
+    <label>Speed:</label>
+    <input id="fps" type="range" value="5" min="1" step="1" max="15" />
+    <output id="fps-value">5</output>
+    FPS
+    |
+    <button id="play" type="button">&#9654;&#9208; Play/Pause</button>
+    <button id="reset" type="button">&#8634; Reset</button>
+  </form>
+  <canvas id="canvas" width="600" height="480"></canvas>
+
+  <script type='text/javascript' src='bundle.js'></script>
+</body>
+</html>
